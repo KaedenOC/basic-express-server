@@ -10,9 +10,9 @@ Express Server Mechanics: Routing, Middleware, and Approaches to Testing
 
 ## Links and Resources
 
-- [GitHub Actions]()
+- [GitHub Actions](https://github.com/KaedenOC/basic-express-server/actions)
 
-- [back-end prod server]()
+- [back-end prod server](https://basic-express-server-u3wy.onrender.com)
 
 ## Collaborators
 
@@ -35,3 +35,6 @@ GET : /person?name= - specific route to hit
 
 to run tests, after running npm i, run the command npm test
 
+## UML
+
+![UML 02](./assets/uml02.jpg)
