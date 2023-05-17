@@ -4,7 +4,7 @@
 
 module.exports = (req, res, next) => {
 
-  if(req.query.name){
+  if(req.query){
     next();
   } else {
     next('please enter a valid name');

@@ -3,11 +3,10 @@
 const validator = require('./validator');
 
 describe('validator', () => {
-  let req = {query: {person: 'name'}};
+  let req = {};
   let res = {};
   let next = jest.fn();
   test('throws an error as expected', () => {
-    // req = { query: { person: 'name'} };
     validator(req, res, next);
 
     expect(next).toHaveBeenCalledWith('please enter a valid name');
