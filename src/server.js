@@ -5,6 +5,8 @@ const express = require('express');
 const cors = require('cors');
 const logger = require('./middleware/logger');
 const validator = require('./middleware/validator');
+const notFound = require('./error-handler/404');
+const internalServerError = require('./error-handler/500');
 
 
 
@@ -27,6 +29,9 @@ app.get('/person', validator, (req, res, next) => {
   res.status(200).send(req.query);
 });
 
+
+app.use('*', notFound);
+app.use(internalServerError);
 
 const start = (port) => app.listen(port, () => console.log('listening on port:', port));
 
